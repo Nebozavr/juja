@@ -1,4 +1,4 @@
-package ua.com.juja.core.week2;
+package ua.com.juja.core.week02;
 
 import java.util.Arrays;
 
