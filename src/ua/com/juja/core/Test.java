@@ -5,24 +5,14 @@ import java.util.Arrays;
 public class Test {
 
 
-    public static void main(String[] args) {
-        // System.out.println(printPurchases(false,true));
-        int[] array = new int[]{1, 23, 6};
-     //   int[] array2 = Arrays.sort(array);
-        Arrays.sort(array);
 
-        System.out.println(Arrays.toString(array));
+        public static void main(String[] args) {
+            System.out.println(f(5, 3));
+        }
+        public static int f(int a, int b) {
+            return (b == 0) ? a : 1 + f(a, b - 1);
+        }
 
-/*
-        for (int k: array) {
-            System.out.print(k);
-        }*/
-       /* int[] mass = merge(array, array2);
-        System.out.println();
-        for (int k: mass) {
-            System.out.print(k);*/
-
-    }
 
     public static String printPurchases(boolean hasEggs, boolean hasBread) {
        /*BODY*/

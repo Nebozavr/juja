@@ -13,6 +13,8 @@ public class SelectionSorter {
                 }
             arr[findIndex] = arr[barrier];
             arr[barrier] = min;
+
+
         }
     }
 }
