@@ -17,8 +17,8 @@ public class MatrixUtils {
     }
 
     private static void printMatrix(int[][] matrix) {
-        for (int i = 0; i < matrix.length ; i++) {
-            for (int j = 0; j < matrix[0].length ; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
                 System.out.print(matrix[i][j] + "\t");
             }
             System.out.println("");
@@ -27,7 +27,7 @@ public class MatrixUtils {
     }
 
 
-    public static int[][] mul(int[][] fst, int[][] snd) {
+    private static int[][] mul(int[][] fst, int[][] snd) {
         int fstLength = fst.length;
         int snd0Length = snd[0].length;
         int sndLength = snd.length;
@@ -36,12 +36,12 @@ public class MatrixUtils {
 
         for (int i = 0; i < fstLength; i++) {
             for (int j = 0; j < snd0Length; j++) {
-                for (int k = 0; k < sndLength ; k++) {
+                for (int k = 0; k < sndLength; k++) {
                     result[i][j] += fst[i][k] * snd[k][j];
                 }
             }
         }
-        
+
         return result;
     }
 }
