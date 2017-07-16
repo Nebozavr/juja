@@ -2,12 +2,6 @@ package ua.com.juja.core;
 
 public class changeXY {
 
-    public static void main(String[] args) {
-        assertEquals("x", "y");
-        assertEquals("aadx", "aady");
-        assertEquals("xy", "yy");
-    }
-
     private static void assertEquals(String input, String expected) {
         String actual = change(input);
         String output = actual.equals(expected) ? "OK" : "FAIL expected: " + expected + " but was: " + input;
