@@ -10,7 +10,7 @@ public class Journal extends Issue {
         this.numberJournal = numberJournal;
     }
 
-    public String toPrint(){
+    public String toPrint() {
 
         String result = "Journal{" + super.toPrint() + ",year=" + yearJournal + ",number=" + numberJournal + "}";
         return result;
