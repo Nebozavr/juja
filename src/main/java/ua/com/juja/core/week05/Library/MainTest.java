@@ -8,9 +8,9 @@ public class MainTest {
         Issue book = new Book("Book", 50, "Author");
         Issue journal = new Journal("Journal", 100, "1990", "5");
 
-        System.out.println(issue.toPrint());
+       /* System.out.println(issue.toPrint());
         System.out.println(book.toPrint());
-        System.out.println(journal.toPrint());
+        System.out.println(journal.toPrint());*/
 
 
         Issue[] catalog = new Issue[3];
@@ -20,6 +20,9 @@ public class MainTest {
 
         String print = new Library().printCatalog(catalog);
 
+        String printBarrier = new Library().getIssueWithCountPagesMoreN(catalog, 40);
+
         System.out.println(print);
+        System.out.println(printBarrier);
     }
 }

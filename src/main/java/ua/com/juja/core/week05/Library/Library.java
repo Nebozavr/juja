@@ -16,5 +16,21 @@ public class Library {
         return result;
     }
 
+    public String getIssueWithCountPagesMoreN(Issue[] catalog, int barrierCountPages) {
+        String result = "";
+
+        if (catalog == null) {
+            return result;
+        }
+
+        for (int index = 0; index < catalog.length; index++) {
+            if (catalog[index].getCountPages() > barrierCountPages) {
+                result += catalog[index].toPrint();
+            }
+        }
+
+        return result;
+    }
+
 
 }
