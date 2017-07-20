@@ -9,8 +9,11 @@ class Book extends Issue {
     }
 
     public String toPrint() {
-        String result = "Book{" + super.toPrint() + ",author=" + authorBook + "}";
-        return result;
+        return "Book{" +
+                "name=" + getName() +
+                ",countPages=" + getCountPages() +
+                ",author=" + authorBook +
+                "}";
     }
 
 

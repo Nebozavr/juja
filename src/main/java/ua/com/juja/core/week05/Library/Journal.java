@@ -11,8 +11,11 @@ public class Journal extends Issue {
     }
 
     public String toPrint() {
-
-        String result = "Journal{" + super.toPrint() + ",year=" + yearJournal + ",number=" + numberJournal + "}";
-        return result;
+        return "Journal{" +
+                "name=" + getName() +
+                ",countPages=" + getCountPages() +
+                ",year=" + yearJournal +
+                ",number=" + numberJournal +
+                "}";
     }
 }

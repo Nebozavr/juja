@@ -10,10 +10,19 @@ public class Issue {
     }
 
     public String toPrint() {
-        return "name=" + name +
-                ",countPages=" + countPages;
+        return "Issue{" +
+                "name=" + name +
+                ",countPages=" + countPages +
+                "}";
     }
 
+    public int getCountPages() {
+        return countPages;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
 
 
