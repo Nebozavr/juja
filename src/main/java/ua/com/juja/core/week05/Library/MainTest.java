@@ -13,7 +13,7 @@ public class MainTest {
         System.out.println(journal.toPrint());*/
 
 
-        Issue[] catalog = new Issue[3];
+        Issue[] catalog = new Issue[]{new Issue("Test Book", 50)};
         catalog[0] = new Issue("Test Book", 50);
         catalog[1] = new Book("Test Book", 100, "Yura Bartoshchuk");
         catalog[2] = new Journal("Test Journal", 20, "1990", "#5");
