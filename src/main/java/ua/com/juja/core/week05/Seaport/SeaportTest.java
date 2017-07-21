@@ -24,7 +24,7 @@ public class SeaportTest {
         }
 
 
-        //System.out.println(sortSumPaymentAsc(odessaSeaPort.getArrayShip()));
+        System.out.println(OdessaSeaPort.sortSumPaymentAsc(odessaSeaPort.getArrayShip()));
 
 
     }
