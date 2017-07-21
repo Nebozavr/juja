@@ -58,16 +58,15 @@ public class OdessaSeaPort implements SeaPortQueue {
         return result;
     }
 
-        for (int i = 0; i < arrayShips.length; i++) {
-            for (int j = arrayShips.length - 1; j > i; j--) {
-                if (arrayShips[j - 1].calculatePayment() > arrayShips[j].calculatePayment()) {
-                    AbstractShip element = arrayShips[j - 1];
-                    arrayShips[j - 1] = arrayShips[j];
-                    arrayShips[j] = element;
-                }
-            }
+        Arrays.sort(arrayShips, new Comparator<AbstractShip>() {
+            public int compare(AbstractShip o1, AbstractShip o2) {
+                Float a1 =  o1.calculatePayment();
+                Float a2 =  o2.calculatePayment();
 
-        }
+                return a2.compareTo(a1);
+            }
+        });
+
 
         for (AbstractShip ship: arrayShips) {
             result += ship.getName() + "=" + ship.calculatePayment();

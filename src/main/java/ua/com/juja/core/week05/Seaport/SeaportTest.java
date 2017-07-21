@@ -14,7 +14,17 @@ public class SeaportTest {
         odessaSeaPort.addShipToEndQueue(tanker);
         odessaSeaPort.addShipToEndQueue(cargo);
 
-        AbstractShip[] test = new AbstractShip[3];
+        System.out.println(OdessaSeaPort.sortSumPaymentAsc(odessaSeaPort.getArrayShip()));
+
+        /*System.out.println(odessaSeaPort.printQueueShip());
+
+        odessaSeaPort.removeShipFromBeginQueue();
+        odessaSeaPort.addShipToEndQueue(tanker);
+        odessaSeaPort.removeShipFromBeginQueue();
+        System.out.println(odessaSeaPort.printQueueShip());*/
+
+
+        /*AbstractShip[] test = new AbstractShip[3];
         test[0] = liner;
         test[1] = tanker;
         test[2] = cargo;
@@ -24,7 +34,7 @@ public class SeaportTest {
         }
 
 
-        System.out.println(OdessaSeaPort.sortSumPaymentAsc(odessaSeaPort.getArrayShip()));
+        System.out.println(OdessaSeaPort.sortSumPaymentAsc(odessaSeaPort.getArrayShip()));*/
 
 
     }
