@@ -1,6 +1,9 @@
 package ua.com.juja.core.week05.Seaport;
 
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class OdessaSeaPort implements SeaPortQueue {
     private static final int NO_SHIP_IN_ARRAY = -1;
     private int indexShipInPort = NO_SHIP_IN_ARRAY;
@@ -45,5 +48,37 @@ public class OdessaSeaPort implements SeaPortQueue {
             result += "{" + arrayShip[index].toPrint() + "};";
         }
         return result;
+    }
+
+    public static String sortSumPaymentAsc(AbstractShip[] arrayShips) {
+
+    String result = "";
+
+    if (arrayShips == null || arrayShips.length < 0){
+        return result;
+    }
+
+        for (int i = 0; i < arrayShips.length; i++) {
+            for (int j = arrayShips.length - 1; j > i; j--) {
+                if (arrayShips[j - 1].calculatePayment() > arrayShips[j].calculatePayment()) {
+                    AbstractShip element = arrayShips[j - 1];
+                    arrayShips[j - 1] = arrayShips[j];
+                    arrayShips[j] = element;
+                }
+            }
+
+        }
+
+        for (AbstractShip ship: arrayShips) {
+            result += ship.getName() + "=" + ship.calculatePayment();
+        }
+
+        return result;
+
+
+    }
+
+    public AbstractShip[] getArrayShip() {
+        return arrayShip;
     }
 }

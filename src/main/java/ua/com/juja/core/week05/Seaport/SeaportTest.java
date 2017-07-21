@@ -1,5 +1,6 @@
 package ua.com.juja.core.week05.Seaport;
 
+
 public class SeaportTest {
     public static void main(String[] args) {
         AbstractShip liner = new Liner("Liner", 200, 100, 2000, 500);
@@ -13,12 +14,17 @@ public class SeaportTest {
         odessaSeaPort.addShipToEndQueue(tanker);
         odessaSeaPort.addShipToEndQueue(cargo);
 
-        System.out.println(odessaSeaPort.printQueueShip());
+        AbstractShip[] test = new AbstractShip[3];
+        test[0] = liner;
+        test[1] = tanker;
+        test[2] = cargo;
 
-        odessaSeaPort.removeShipFromBeginQueue();
-        odessaSeaPort.addShipToEndQueue(tanker);
-        odessaSeaPort.removeShipFromBeginQueue();
-        System.out.println(odessaSeaPort.printQueueShip());
+        for (AbstractShip ship: odessaSeaPort.getArrayShip()) {
+            System.out.println(ship.calculatePayment());
+        }
+
+
+        //System.out.println(sortSumPaymentAsc(odessaSeaPort.getArrayShip()));
 
 
     }
