@@ -1,7 +1,6 @@
 package ua.com.juja.core.week05.Seaport;
 
 
-
 public class OdessaSeaPort implements SeaPortQueue {
     private static final int NO_SHIP_IN_ARRAY = -1;
     private int indexShipInPort = NO_SHIP_IN_ARRAY;
@@ -24,29 +23,25 @@ public class OdessaSeaPort implements SeaPortQueue {
         }
 
         for (int index = 0; index < arrayShip.length; index++) {
-            if (index == arrayShip.length- 1 ){
+            if (index == arrayShip.length - 1) {
                 arrayShip[index] = null;
             } else {
-            arrayShip[index] = arrayShip[index + 1];
-
+                arrayShip[index] = arrayShip[index + 1];
             }
         }
 
-
         indexShipInPort--;
-
         return 1;
     }
 
     public String printQueueShip() {
-        if (indexShipInPort < 0){
+        if (indexShipInPort < 0) {
             return "QueueEmpty";
         }
 
         String result = "";
 
-
-        for (int index = 0; index <= indexShipInPort ; index++) {
+        for (int index = 0; index <= indexShipInPort; index++) {
             result += "{" + arrayShip[index].toPrint() + "};";
         }
         return result;
