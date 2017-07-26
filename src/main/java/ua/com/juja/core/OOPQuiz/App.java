@@ -1,15 +1,9 @@
 package ua.com.juja.core.OOPQuiz;
 
-abstract class App {
-    public abstract void f();
-
+public class App {
     public static void main(String[] args) {
-        g(new Object[16], new App[16]);
-    }
-
-    private static void g(Object[] src, App[] dst) {
-        for (int k = 0; k < src.length; k++) {
-            dst[k] = (App) src[k];
-        }
+        Integer i0 = 100;
+        Integer i1 = Integer.valueOf(100);
+        System.out.println(i0 == i1);
     }
 }
