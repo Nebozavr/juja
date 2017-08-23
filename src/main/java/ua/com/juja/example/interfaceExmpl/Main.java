@@ -10,6 +10,7 @@ public class Main {
 
         System.out.println(wolf.move());
         System.out.println(bird.move());
+        System.out.println(bird.move());
 
 
 

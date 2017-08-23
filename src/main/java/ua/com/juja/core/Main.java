@@ -19,10 +19,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Main test = new Main(3,4,5,6,7);
+        StringBuilder test = new StringBuilder();
 
+        for (int i = 0; i < 10; i++) {
+            test.append(i).append(i+1);
+        }
+
+        System.out.println(test);
         System.out.println(test.toString());
-
 
     }
 }

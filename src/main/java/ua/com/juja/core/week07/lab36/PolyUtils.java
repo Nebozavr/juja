@@ -10,6 +10,8 @@ public class PolyUtils {
         BigInteger[] data1 = new BigInteger[] {new BigInteger("1"), new BigInteger("1")};
 
         System.out.println(Arrays.toString(mul(data, data1)));
+
+
     }
 
     public static BigInteger[] mul(BigInteger[] x, BigInteger[] y) {
