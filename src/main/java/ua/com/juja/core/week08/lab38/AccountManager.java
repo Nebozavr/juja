@@ -1,5 +1,7 @@
 package ua.com.juja.core.week08.lab38;
 
+import java.lang.annotation.Retention;
+
 /**
  * Для работы с банковским счетом отдельного пользователя был разработан абстрактный класс Account.
  * <p>
@@ -30,9 +32,9 @@ package ua.com.juja.core.week08.lab38;
  * false - во всех остальных случаях.
  */
 
-public class AccountManager  {
+public class AccountManager {
 
-     public static boolean transfer(Account[] accounts, int[] delta) {
+    public static boolean transfer(Account[] accounts, int[] delta) {
         int amountsSave[] = new int[accounts.length];
         for (int i = 0; i < amountsSave.length; i++) {
             amountsSave[i] = accounts[i].getAmount();
@@ -40,27 +42,23 @@ public class AccountManager  {
 
         boolean result = true;
 
+        for (int k = 0; k < accounts.length; k++) {
+            try {
+                accounts[k].change(delta[k]);
+                result = true;
 
-            for (int k = 0; k < accounts.length; k++) {
-                try {
-                    accounts[k].change(delta[k]);
-                    result = true;
-
-                } catch (TryAgainException e) {
-                    k--;
-                } catch (BlockAccountException e) {
-                    result = false;
-                    for (int i = 0; i < accounts.length; i++) {
-                        accounts[i].amount = amountsSave[i];
-                    }
-                    break;
+            } catch (TryAgainException e) {
+                k--;
+            } catch (BlockAccountException e) {
+                result = false;
+                for (int i = 0; i < accounts.length; i++) {
+                    accounts[i].amount = amountsSave[i];
                 }
+                break;
             }
-
-
+        }
         return result;
     }
-
 }
 
 abstract class Account {

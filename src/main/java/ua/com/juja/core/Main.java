@@ -1,5 +1,6 @@
 package ua.com.juja.core;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -27,6 +28,7 @@ public class Main {
 
         System.out.println(test);
         System.out.println(test.toString());
+      //  ArrayList
 
     }
 }

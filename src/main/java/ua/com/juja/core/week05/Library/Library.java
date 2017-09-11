@@ -10,7 +10,7 @@ public class Library {
         }
 
         for (Issue iter: catalog) {
-            result += iter.toPrint();
+            result += iter.toPrint() + "\n";
         }
 
         return result;
