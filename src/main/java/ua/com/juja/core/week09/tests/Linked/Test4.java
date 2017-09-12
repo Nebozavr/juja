@@ -1,21 +1,21 @@
-package ua.com.juja.core.week09.tests;
+package ua.com.juja.core.week09.tests.Linked;
 
-import ua.com.juja.core.week09.collections.SimpleArrayList;
+import ua.com.juja.core.week09.collections.SimpleLinkedList;
 
-public class Test2 {
+public class Test4 {
     public static void main(String[] args) {
         Integer[] expectedElements = {1, 2, 3, 4, 5, 6, 7};
         String expectedPrintString = "[1, 2, 3, 4, 5, 6, 7]";
 
-        SimpleArrayList<Integer> simpleArrayList = new SimpleArrayList<>();
+        SimpleLinkedList<Integer> simpleLinkedList = new SimpleLinkedList<>();
 
         for (int i = 0; i < expectedElements.length; i++) {
-            simpleArrayList.add(expectedElements[i]);
+            simpleLinkedList.add(expectedElements[i]);
         }
 
         //call
 
-        String actualPrintString = simpleArrayList.toString();
+        String actualPrintString = simpleLinkedList.toString();
 
         //check
         if (!expectedPrintString.equals(actualPrintString))
@@ -23,4 +23,5 @@ public class Test2 {
 
         System.out.print("OK");
     }
+
 }

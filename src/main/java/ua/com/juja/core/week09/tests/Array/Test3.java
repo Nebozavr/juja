@@ -1,4 +1,4 @@
-package ua.com.juja.core.week09.tests;
+package ua.com.juja.core.week09.tests.Array;
 
 import ua.com.juja.core.week09.collections.SimpleArrayList;
 

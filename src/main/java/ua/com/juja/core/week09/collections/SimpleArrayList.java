@@ -114,7 +114,7 @@ public class SimpleArrayList<E> implements SimpleList<E> {
 
     @Override
     public String toString() {
-        if (isEmpty()){
+        if (isEmpty()) {
             return "[]";
         } else {
 
